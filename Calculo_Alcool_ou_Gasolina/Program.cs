@@ -1,4 +1,4 @@
-﻿internal class Program
+﻿public class Program
 {
     private static void Main(string[] args)
     {
@@ -11,16 +11,13 @@
         gasolina = double.Parse(Console.ReadLine());
         Console.WriteLine();
 
-        Console.WriteLine("A relação entre o Álcool e a Gasolina é de " + (alcool / gasolina).ToString("F2"));
-        Console.WriteLine();
+        Console.Write("A relação entre o Álcool e a Gasolina é de " + (alcool / gasolina).ToString("F2"));
+        Console.WriteLine("\n");
 
         if ((alcool / gasolina) <= 0.72)
-        {
-            Console.WriteLine("O Álcool é mais vanjatoso");
-        }
-        else
-        {
-            Console.WriteLine("A Gasolina é mais vanjatosa");
-        }
+            Console.WriteLine("O Álcool é mais vantajoso");
+
+        if ((alcool / gasolina) > 0.72)
+            Console.WriteLine("A Gasolina é mais vantajosa");
     }
 }
